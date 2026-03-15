@@ -1,4 +1,5 @@
 ﻿using DBDefsLib;
+using DBDefsLib.Structs;
 using DBDTest.Structs;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
-using static DBDefsLib.Structs;
 
 namespace DBDTest
 {
@@ -52,8 +52,7 @@ namespace DBDTest
                 sw.Start();
                 using (var stream = File.OpenRead(inputDir))
                 {
-                    var defs = BDBDReader.Read(stream);
-                    foreach(var def in defs)
+                    foreach(var def in BDBDReader.Read(stream).tableDefinitions)
                     {
                         definitionCache.Add(def.Key.ToLower(), def.Value.dbd);
                     }

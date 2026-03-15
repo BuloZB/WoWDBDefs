@@ -1,8 +1,8 @@
-﻿using System;
+﻿using DBDefsLib.Structs;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using static DBDefsLib.Structs;
 
 namespace DBDefsLib
 {
@@ -77,7 +77,7 @@ namespace DBDefsLib
 
                 if (cleaned.StartsWith(thingToUpperCase, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    cleaned = thingToUpperCase + cleaned.Substring(thingToUpperCase.Length);
+                    cleaned = thingToUpperCase + cleaned[thingToUpperCase.Length..];
                 }
 
                 if (cleaned.EndsWith(thingToUpperCase, StringComparison.CurrentCultureIgnoreCase))
@@ -86,9 +86,9 @@ namespace DBDefsLib
                 }
             }
 
-            if (cleaned.EndsWith("_"))
+            if (cleaned.EndsWith('_'))
             {
-                cleaned = cleaned.Substring(0, cleaned.Length - 1);
+                cleaned = cleaned[..^1];
             }
 
             if (fixFirst)
@@ -112,7 +112,32 @@ namespace DBDefsLib
 
             return list;
         }
+
+        public static (List<Build> builds, List<BuildRange> buildRanges) ParseBuildQualifier(string qualifier, int lineNumber)
+        {
+            if (!qualifier.StartsWith("BUILD "))
+                throw new Exception($"Line {lineNumber}: Build qualifier does not start with 'BUILD '");
+
+            var builds = new List<Build>();
+            var buildRanges = new List<BuildRange>();
+
+            var buildsPart = qualifier["BUILD ".Length..];
+            var parts = buildsPart.Split([", "], StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var part in parts)
+            {
+                if (BuildRange.TryParse(part, out var range))
+                    buildRanges.Add(range);
+                else if (Build.TryParse(part, out var build))
+                    builds.Add(build);
+                else
+                    throw new Exception($"Line {lineNumber}: Invalid build or build range: '{part}'");
+            }
+
+            return (builds, buildRanges);
+        }
     }
+
     public static class BinaryWriterExtensions
     {
         public static void WriteStringBlockString(this BinaryWriter bw, Dictionary<string, int> stringBlock, string stringToWrite)

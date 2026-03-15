@@ -1,9 +1,10 @@
 ﻿using DBDefsLib;
+using DBDefsLib.Constants;
+using DBDefsLib.Structs;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using static DBDefsLib.Structs;
 
 namespace DBDefsTest
 {
@@ -183,7 +184,102 @@ namespace DBDefsTest
             }
             else
             {
-                Console.WriteLine("Done");
+                Console.WriteLine("Done reading DBDs");
+            }
+
+            // Flags/enums
+            errorEncountered.Clear();
+
+            var metaDirectory = Path.Combine(definitionDir, "..", "meta");
+            if (File.Exists(Path.Combine(metaDirectory, "mapping.dbdm")))
+            {
+                var dbdmReader = new DBDMReader();
+                List<MappingDefinition> mappings = [];
+
+                try
+                {
+                    mappings = dbdmReader.Read(Path.Combine(metaDirectory, "mapping.dbdm"), true);
+                }
+                catch (Exception ex)
+                {
+                    errorEncountered.Add("mapping");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Failed to read mapping.dbdm: " + ex);
+                    Console.ResetColor();
+                }
+
+                foreach (var mapping in mappings)
+                {
+                    if (!definitionCache.TryGetValue(mapping.tableName, out var dbDef))
+                    {
+                        errorEncountered.Add(mapping.tableName);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"Mapping for {mapping.tableName} references DBD that does not exist");
+                        Console.ResetColor();
+                    }
+                    else if (!dbDef.columnDefinitions.ContainsKey(mapping.columnName))
+                    {
+                        errorEncountered.Add(mapping.tableName);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"Mapping for {mapping.tableName}::{mapping.columnName} references a column that does not exist in the database definition");
+                        Console.ResetColor();
+                    }
+
+                    if (mapping.meta == MetaType.COLOR)
+                        continue;
+
+                    // Flags without file definitions are allowed
+                    if (string.IsNullOrEmpty(mapping.metaValue))
+                        continue;
+
+                    var dir = mapping.meta == MetaType.ENUM ? "enums" : "flags";
+                    var ext = mapping.meta == MetaType.ENUM ? ".dbde" : ".dbdf";
+                    var path = Path.Combine(metaDirectory, dir, $"{mapping.metaValue}{ext}");
+
+                    if (File.Exists(path))
+                    {
+                        using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read))
+                        {
+                            try
+                            {
+                                var dbdeReader = new DBDEnumReader();
+                                var enumDef = dbdeReader.Read(fs, mapping.meta);
+                                fs.Close();
+
+                                if(rewrite)
+                                {
+                                    var dbdeWriter = new DBDEnumWriter();
+                                    dbdeWriter.Save(enumDef, path);
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                errorEncountered.Add(mapping.metaValue);
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine($"Failed to read {mapping.metaValue} for mapping {mapping.tableName}::{mapping.columnName}: " + ex);
+                                Console.ResetColor();
+                            }
+                        }
+                    }
+
+                    // TODO: Conditional table/column validation
+                }
+
+                if(rewrite && errorEncountered.Count == 0)
+                    DBDMWriter.Save(mappings, Path.Combine(metaDirectory, "mapping.dbdm"));
+            }
+
+            if (errorEncountered.Count != 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("There have been errors in the following meta files:");
+                foreach (var metaFile in errorEncountered)
+                    Console.WriteLine(" - " + metaFile);
+                Environment.Exit(1);
+            }
+            else
+            {
+                Console.WriteLine("Done reading meta files");
             }
         }
     }

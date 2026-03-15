@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using DBDefsLib.Structs;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using static DBDefsLib.Structs;
 
 namespace DBDefsLib
 {
@@ -86,12 +86,13 @@ namespace DBDefsLib
                         for (var b = 0; b < versionDefinition.builds.Length; b++)
                         {
                             var major = versionDefinition.builds[b].expansion + "." + versionDefinition.builds[b].major + "." + versionDefinition.builds[b].minor;
-                            if (!buildsByMajor.ContainsKey(major))
+                            if (!buildsByMajor.TryGetValue(major, out List<Build> builds))
                             {
-                                buildsByMajor.Add(major, new List<Build>());
+                                builds = [];
+                                buildsByMajor.Add(major, builds);
                             }
 
-                            buildsByMajor[major].Add(versionDefinition.builds[b]);
+                            builds.Add(versionDefinition.builds[b]);
                         }
 
                         foreach (var buildList in buildsByMajor)
@@ -234,9 +235,10 @@ namespace DBDefsLib
                 var ly = y.layoutHashes;
                 System.Array.Sort(lx);
                 System.Array.Sort(ly);
-                if (!_asc) {
-                    lx.Reverse();
-                    ly.Reverse();
+                if (!_asc)
+                {
+                    lx = [.. lx.Reverse()];
+                    ly = [.. ly.Reverse()];
                 }
 
                 // if layouts exist for both, sort by that

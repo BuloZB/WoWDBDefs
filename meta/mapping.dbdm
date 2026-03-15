@@ -1,5 +1,524 @@
-FLAGS Achievement::Flags AchievementFlags
-FLAGS SpellMisc::Flags[0] SpellAttributes0
-FLAGS SpellMisc::Flags[15]
-ENUM Map::ExpansionID ExpansionLevels
+COLOR ChrCustomizationChoice::SwatchColor[0]
+COLOR ChrCustomizationChoice::SwatchColor[1]
+COLOR DyeColor::SwatchColorEnd
+COLOR DyeColor::SwatchColorStart
+COLOR HighlightColor::EndColor
+COLOR HighlightColor::MidColor
+COLOR HighlightColor::StartColor
+COLOR ItemNameDescription::Color
+COLOR LightData::AmbientColor
+COLOR LightData::CloudEmissiveColor
+COLOR LightData::CloudLayer1AmbientColor
+COLOR LightData::CloudLayer2AmbientColor
+COLOR LightData::CloudSunColor
+COLOR LightData::DirectColor
+COLOR LightData::EndFogColor
+COLOR LightData::EndFogHeightColor
+COLOR LightData::FogHeightColor
+COLOR LightData::GroundAmbientColor
+COLOR LightData::HorizonAmbientColor
+COLOR LightData::OceanCloseColor
+COLOR LightData::OceanFarColor
+COLOR LightData::RiverCloseColor
+COLOR LightData::RiverFarColor
+COLOR LightData::ShadowOpacity
+COLOR LightData::SkyBand1Color
+COLOR LightData::SkyBand2Color
+COLOR LightData::SkyFogColor
+COLOR LightData::SkyMiddleColor
 COLOR LightData::SkySmogColor
+COLOR LightData::SkyTopColor
+COLOR LightData::SunColor
+COLOR Lightning::BoltColor
+COLOR Lightning::FlashColor
+COLOR LightShaft::Color
+COLOR LiquidType::MinimapStaticCol
+COLOR Weather::OverrideColor
+ENUM AlliedRace::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM AreaTrigger::ShapeType ShapeType
+ENUM AreaTriggerCreateProperties::ShapeType ShapeType
+ENUM AzeriteTierUnlock::Tier AzeriteTierID
+ENUM BarberShopStyle::Race ChrRaceID // Not a real enum, but for ease
+ENUM BattlePetAbility::PetTypeEnum BattlePetTypes
+ENUM BattlePetAbilityTurn::EventTypeEnum BattlePetEvent
+ENUM BattlePetAbilityTurn::TurnTypeEnum BattlePetAbilityTurnType
+ENUM BattlePetBreedQuality::QualityEnum BattlePetBreedQuality
+ENUM BattlePetEffectProperties::ParamTypeEnum[0] BattlePetEffectParamType
+ENUM BattlePetEffectProperties::ParamTypeEnum[1] BattlePetEffectParamType
+ENUM BattlePetEffectProperties::ParamTypeEnum[2] BattlePetEffectParamType
+ENUM BattlePetEffectProperties::ParamTypeEnum[3] BattlePetEffectParamType
+ENUM BattlePetEffectProperties::ParamTypeEnum[4] BattlePetEffectParamType
+ENUM BattlePetSpecies::PetTypeEnum BattlePetTypes
+ENUM BattlePetSpecies::SourceTypeEnum BattlePetSources
+ENUM BattlePetVisual::RangeTypeEnum BattlePetVisualRange
+ENUM ChallengeModeItemBonusOverride::Type ChallengeModeItemBonusOverrideType
+ENUM CharacterFacialHairStyles::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM CharacterLoadout::Purpose CharacterLoadoutPurpose
+ENUM CharBaseInfo::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM CharComponentTextureSections::SectionType ComponentSection
+ENUM CharHairGeosets::GeosetType GeosetType
+ENUM CharHairGeosets::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM CharSectionCondition::BaseSection CharSectionType
+ENUM CharSectionCondition::Sex CharSex
+ENUM CharSections::BaseSection CharSectionType
+ENUM CharSections::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM CharSections::SexID CharSex
+ENUM CharStartKit::ChrRacesID ChrRaceID // Not a real enum, but for ease
+ENUM CharStartOutfit::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM CharVariations::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM ChatChannels::Ruleset ChatChannelRuleSet
+ENUM ChatProfanity::Language ChatProfanityLanguage
+ENUM ChrClasses::SpellClassSet SpellClassSet
+ENUM ChrCustomization::ComponentSection[0] ComponentSection
+ENUM ChrCustomization::ComponentSection[1] ComponentSection
+ENUM ChrCustomization::ComponentSection[2] ComponentSection
+ENUM ChrCustomization::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM ChrCustomization::UiCustomizationType UiCustomizationType
+ENUM ChrCustomizationConversion::ChrRacesID ChrRaceID // Not a real enum, but for ease
+ENUM ChrCustomizationGeoset::GeosetType GeosetType
+ENUM ChrCustomizationOption::ChrModelID ChrModelID // Not a real enum, but for ease
+ENUM ChrCustomizationOption::OptionType ChrCustomizationOptionType
+ENUM ChrCustomizationReq::OverrideArchive ChrCustomizationReqOverrideArchive
+ENUM ChrCustomizationReq::ReqType ChrCustomizationReqType
+ENUM ChrCustomizationSkinnedModel::GeosetType GeosetType
+ENUM ChrModelMaterial::Flags ChrModelMaterialSkinType
+ENUM ChrModelMaterial::TextureType TextureType
+ENUM ChrModelTextureLayer::BlendMode ChrModelTextureLayerBlendMode
+ENUM ChrModelTextureLayer::ChrModelTextureTargetID[0] ChrModelTextureTarget
+ENUM ChrModelTextureLayer::ChrModelTextureTargetID[1] ChrModelTextureTarget
+ENUM ChrModelTextureLayer::TextureType TextureType
+ENUM ChrRaceRacialAbility::ChrRacesID ChrRaceID // Not a real enum, but for ease
+ENUM ChrRaces::NeutralRaceID ChrRaceID // Not a real enum, but for ease
+ENUM ChrRaces::PlayableRaceBit ChrRacesPlayableRaceBit
+ENUM ChrRaces::UnalteredVisualRaceID ChrRaceID // Not a real enum, but for ease
+ENUM ChrRaceXChrModel::ChrModelID ChrModelID // Not a real enum, but for ease
+ENUM ChrRaceXChrModel::ChrRacesID ChrRaceID // Not a real enum, but for ease
+ENUM ChrSpecialization::Role ChrSpecializationRole
+ENUM ContentRestrictionRule::ExpansionID ExpansionLevels
+ENUM ContentRestrictionRule::RuleType ContentRestrictionRuleTypes
+ENUM ContentTuning::ExpansionID ExpansionLevels
+ENUM CraftingData::Type CraftingDataType
+ENUM CreatureDifficulty::ExpansionID ExpansionLevels
+ENUM CreatureDisplayInfoExtra::DisplayRaceID ChrRaceID // Not a real enum, but for ease
+ENUM Criteria::Fail_event CriteriaFailEvent
+ENUM Criteria::Start_event CriteriaStartEvent
+ENUM Criteria::Type CriteriaType
+ENUM CriteriaTree::Operator CriteriaTreeOperator
+ENUM Curve::Type CurveType
+ENUM Difficulty::InstanceType MapTypes
+ENUM DisplaySeason::ExpansionID ExpansionLevels
+ENUM DisplaySeason::ExpansionID ExpansionLevels
+ENUM Emotes::EmoteSpecProc EmoteSpecProc
+ENUM EmotesTextSound::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM EnumeratedString::EnumID EnumNames // so meta
+ENUM EnvironmentalDamage::EnumID EnvironmentalDamageType
+ENUM ExpectedStat::ExpansionID ExpectedStatExpansionID
+ENUM GarrAbilityEffect::AbilityAction GarrAbilityAction
+ENUM GarrAbilityEffect::AbilityTargetType GarrAbilityTargetType
+ENUM GarrAutoCombatant::Role GarrAutoCombatantRole
+ENUM GarrAutoSpellEffect::Effect GarrAutoSpellEffectType
+ENUM GarrAutoSpellEffect::TargetType GarrAutoSpellEffectTargetType
+ENUM GarrBuilding::BuildingType GarrBuildingType
+ENUM GarrFollItemSetMember::ItemSlot GarrFollowerItemSlot
+ENUM GarrFollowerQuality::Quality GarrFollowerQuality
+ENUM GarrMechanicType::Category GarrMechanicCategory
+ENUM GarrPlot::PlotType GarrPlotType
+ENUM GarrSpecialization::BuildingType GarrBuildingType
+ENUM GarrSpecialization::SpecType GarrSpecType
+ENUM GarrTalent::ResearchCostSource GarrTalentResearchCostSource
+ENUM GarrTalent::TalentType GarrTalentType
+ENUM GarrTalentCost::CostType GarrTalentCostType
+ENUM GarrTalentSocketProperties::GarrTalentSocketType GarrTalentSocketType
+ENUM GarrTalentTree::FeatureSubtypeIndex GarrTalentTreeFeatureSubtypeIndex
+ENUM GarrTalentTree::FeatureTypeIndex GarrTalentTreeFeatureTypeIndex
+ENUM GarrType::ExpansionID ExpansionLevels
+ENUM GlobalCurve::Type GlobalCurveType
+ENUM GlobalGameContentTuning::ExpansionID ExpansionLevels
+ENUM GlobalTable_PlayerCondition::What GlobalTablePlayerConditionWhat
+ENUM GlueScreenEmote::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM GroupFinderActivity::DisplayType GroupFinderActivityDisplayType
+ENUM HelmetAnimScaling::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM HelmetGeosetData::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM HighlightColor::Type HighlightColorType
+ENUM Item::ClassID ItemClass
+ENUM Item::InventoryType InventoryType
+ENUM Item::SubclassID ItemSubClass0 Item::ClassID=0
+ENUM Item::SubclassID ItemSubClass1 Item::ClassID=1
+ENUM Item::SubclassID ItemSubClass2 Item::ClassID=2
+ENUM Item::SubclassID ItemSubClass3 Item::ClassID=3
+ENUM Item::SubclassID ItemSubClass4 Item::ClassID=4
+ENUM Item::SubclassID ItemSubClass5 Item::ClassID=5
+ENUM Item::SubclassID ItemSubClass6 Item::ClassID=6
+ENUM Item::SubclassID ItemSubClass7 Item::ClassID=7
+ENUM Item::SubclassID ItemSubClass8 Item::ClassID=8
+ENUM Item::SubclassID ItemSubClass9 Item::ClassID=9
+ENUM Item::SubclassID ItemSubClass10 Item::ClassID=10
+ENUM Item::SubclassID ItemSubClass11 Item::ClassID=11
+ENUM Item::SubclassID ItemSubClass12 Item::ClassID=12
+ENUM Item::SubclassID ItemSubClass13 Item::ClassID=13
+ENUM Item::SubclassID ItemSubClass14 Item::ClassID=14
+ENUM Item::SubclassID ItemSubClass15 Item::ClassID=15
+ENUM Item::SubclassID ItemSubClass16 Item::ClassID=16
+ENUM Item::SubclassID ItemSubClass17 Item::ClassID=17
+ENUM Item::SubclassID ItemSubClass18 Item::ClassID=18
+ENUM Item::SubclassID ItemSubClass19 Item::ClassID=19
+ENUM Item::SubclassID ItemSubClass20 Item::ClassID=20
+ENUM ItemAppearance::DisplayType ItemDisplayType
+ENUM ItemBonus::Type ItemBonusTypes
+ENUM ItemBonus::Value[0] ItemStatType ItemBonus::Type=2
+ENUM ItemBonus::Value[0] ItemQuality ItemBonus::Type=3
+ENUM ItemBonus::Value[0] ItemBonding ItemBonus::Type=16
+ENUM ItemBonus::Value[0] ItemStatType ItemBonus::Type=25
+ENUM ItemBonus::Value[1] SocketColor ItemBonus::Type=6
+ENUM ItemBonusTreeNode::ItemContext ItemContext
+ENUM ItemDisenchantLoot::ExpansionID ExpansionLevels
+ENUM ItemDisplayInfoMaterialRes::ComponentSection ComponentSection
+ENUM ItemDisplayInfoModelMatRes::TextureType TextureType
+ENUM ItemEffect::TriggerType ItemEffectTriggerType
+ENUM ItemModifiedAppearance::TransmogSourceTypeEnum TransmogSourceType
+ENUM ItemSearchName::ExpansionID ExpansionLevels
+ENUM ItemSparse::Bonding ItemBonding
+ENUM ItemSparse::ExpansionID ExpansionLevels
+ENUM ItemSparse::InventoryType InventoryType
+ENUM ItemSparse::OverallQualityID ItemQuality
+ENUM ItemSparse::SocketType[0] SocketColor
+ENUM ItemSparse::SocketType[1] SocketColor
+ENUM ItemSparse::SocketType[2] SocketColor
+ENUM ItemSparse::StatModifier_bonusStat[0] ItemStatType
+ENUM ItemSparse::StatModifier_bonusStat[1] ItemStatType
+ENUM ItemSparse::StatModifier_bonusStat[2] ItemStatType
+ENUM ItemSparse::StatModifier_bonusStat[3] ItemStatType
+ENUM ItemSparse::StatModifier_bonusStat[4] ItemStatType
+ENUM ItemSparse::StatModifier_bonusStat[5] ItemStatType
+ENUM ItemSparse::StatModifier_bonusStat[6] ItemStatType
+ENUM ItemSparse::StatModifier_bonusStat[7] ItemStatType
+ENUM ItemSparse::StatModifier_bonusStat[8] ItemStatType
+ENUM ItemSparse::StatModifier_bonusStat[9] ItemStatType
+ENUM JournalEncounterItem::DifficultyMask JournalEncounterItemDifficulty // mask? is this flags?
+ENUM JournalEncounterItem::FactionMask JournalEncounterItemFactionType // mask? is this flags?
+ENUM JournalEncounterSection::Type JournalEncounterSectionType
+ENUM LFGDungeons::Subtype LFGSubType
+ENUM LFGDungeons::TypeID LFGType
+ENUM LiquidTypeXTexture::Type LiquidTypeTextureType
+ENUM Map::ExpansionID ExpansionLevels
+ENUM Map::InstanceType MapTypes
+ENUM MapDifficulty::ItemContext ItemContext
+ENUM MapDifficulty::ResetInterval MapDifficultyResetInterval
+ENUM ModifierTree::Asset ItemQuality ModifierTree::Type=14
+ENUM ModifierTree::Asset ItemQuality ModifierTree::Type=15
+ENUM ModifierTree::Operator ModifierTreeOperator
+ENUM ModifierTree::Type CriteriaAdditionalCondition
+ENUM NameGen::RaceID ChrRaceID // Not a real enum, but for ease
+ENUM NPCModelItemSlotDisplayInfo::ItemSlot ItemSlot
+ENUM ObjectEffectPackageElem::StateType ObjectEffectPackageStateType
+ENUM PathProperty::PropertyIndex PathProperty
+ENUM PlayerCondition::MinReputation[0] ReputationLevels
+ENUM PlayerInteractionInfo::Type PlayerInteractionType
+ENUM PowerType::PowerTypeEnum PowerType
+ENUM Profession::ProfessionEnumValue ProfessionEnumValue
+ENUM ProfessionExpansion::ExpansionID ExpansionLevels
+ENUM QuestInfo::Type QuestTagType
+ENUM QuestObjective::Type QuestObjectiveType
+ENUM RelicTalent::Type RelicTalentType
+ENUM RoomComponent::ConnectionType RoomComponentConnectionType
+ENUM RoomComponent::Type RoomComponentType
+ENUM RoomComponentOption::Type RoomComponentOptionType
+ENUM RoomComponentTexture::RoomComponentType RoomComponentType
+ENUM Scenario::Type ScenarioType
+ENUM ScenarioEventEntry::TriggerType ScenarioEventEntryTriggerType
+ENUM SoulbindConduit::ConduitType SoulbindConduitType
+ENUM SoundCharacterMacroLines::Race ChrRaceID // Not a real enum, but for ease
+ENUM SoundEmitters::EmitterType SoundEmitterType
+ENUM SoundEntries::SoundType SoundKitType
+ENUM SoundKit::SoundType SoundKitType
+ENUM SpellClassOptions::SpellClassSet SpellClassSet
+ENUM SpellEffect::Effect SpellEffect
+ENUM SpellEffect::EffectAura SpellEffectAura
+ENUM SpellEffect::EffectMiscValue[0] SpellModOp SpellEffect::EffectAura=107
+ENUM SpellEffect::EffectMiscValue[0] SpellModOp SpellEffect::EffectAura=108
+ENUM SpellEffect::EffectMiscValue[0] SpellModOp SpellEffect::EffectAura=218
+ENUM SpellEffect::EffectMiscValue[0] SpellModOp SpellEffect::EffectAura=219
+ENUM SpellEffect::EffectMiscValue[0] PrimaryStats SpellEffect::EffectAura=29
+ENUM SpellEffect::EffectMiscValue[0] PrimaryStats SpellEffect::EffectAura=80
+ENUM SpellEffect::EffectMiscValue[0] PrimaryStats SpellEffect::EffectAura=137
+ENUM SpellEffect::EffectMiscValue[0] PrimaryStats SpellEffect::EffectAura=175
+ENUM SpellEffect::EffectMiscValue[0] PrimaryStats SpellEffect::EffectAura=29
+ENUM SpellEffect::EffectMiscValue[0] PrimaryStats SpellEffect::EffectAura=80
+ENUM SpellEffect::EffectMiscValue[0] PrimaryStats SpellEffect::EffectAura=137
+ENUM SpellEffect::EffectMiscValue[0] PrimaryStats SpellEffect::EffectAura=175
+ENUM SpellEffect::EffectMiscValue[0] SpellModOp SpellEffect::EffectAura=107
+ENUM SpellEffect::EffectMiscValue[0] SpellModOp SpellEffect::EffectAura=108
+ENUM SpellEffect::EffectMiscValue[0] SpellModOp SpellEffect::EffectAura=218
+ENUM SpellEffect::EffectMiscValue[0] SpellModOp SpellEffect::EffectAura=219
+ENUM SpellEffect::EffectMiscValue[1] PrimaryStats SpellEffect::EffectAura=174
+ENUM SpellEffect::EffectMiscValue[1] PrimaryStats SpellEffect::EffectAura=571
+ENUM SpellEffect::EffectMiscValue[1] PrimaryStats SpellEffect::EffectAura=583
+ENUM SpellEffect::ImplicitTarget[0] Target
+ENUM SpellEffect::ImplicitTarget[1] Target
+ENUM SpellItemEnchantment::Effect[0] SpellItemEnchantmentEffect
+ENUM SpellItemEnchantment::Effect[1] SpellItemEnchantmentEffect
+ENUM SpellItemEnchantment::Effect[2] SpellItemEnchantmentEffect
+ENUM SpellItemEnchantment::EffectArg[0] ItemStatType SpellItemEnchantment::Effect[0]=5
+ENUM SpellItemEnchantment::EffectArg[1] ItemStatType SpellItemEnchantment::Effect[1]=5
+ENUM SpellItemEnchantment::EffectArg[2] ItemStatType SpellItemEnchantment::Effect[2]=5
+ENUM SpellLabel::LabelID SpellLabelName
+ENUM SpellScript::Arguments SpellScriptArgs
+ENUM SpellVisualEffectName::Type SpellVisualEffectNameType
+ENUM SpellVisualEvent::EndEvent SpellVisualEventEvent
+ENUM SpellVisualEvent::StartEvent SpellVisualEventEvent
+ENUM SpellVisualEvent::TargetType SpellVisualEventTargetType
+ENUM SpellVisualKitEffect::EffectType SpellVisualKitEffectType
+ENUM SummonProperties::Control SummonPropertiesControl
+ENUM SummonProperties::Slot SummonPropertiesSlot
+ENUM TraitCond::CondType TraitConditionType
+ENUM TraitCostDefinition::DefinitionType TraitCostDefinitionType
+ENUM TraitCurrency::Type TraitCurrencyType
+ENUM TraitDefinitionEffectPoints::OperationType TraitPointsOperationType
+ENUM TraitEdge::Type TraitEdgeType
+ENUM TraitEdge::VisualStyle TraitEdgeVisualStyle
+ENUM TraitNode::Type TraitNodeType
+ENUM TraitNodeEntry::NodeEntryType TraitNodeEntryType
+ENUM TransmogDefaultLevel::ExpansionID ExpansionLevels
+ENUM TransmogSet::ExpansionID ExpansionLevels
+ENUM UiCamFbackTransmogChrRace::ChrRaceID ChrRaceID // Not a real enum, but for ease
+ENUM UIEventToast::DisplayType EventToastDisplayType
+ENUM UIEventToast::EventType EventToastEventType
+ENUM UiMap::System UiMapSystem
+ENUM UiMap::Type UiMapType
+ENUM UiModelSceneCamera::CameraType UiModelSceneCameraCameraType
+ENUM UISplashScreen::ScreenType UiSplashScreenType
+ENUM UiWidgetDataSource::SourceType UiWidgetDataSourceSourceType
+ENUM UiWidgetSet::LayoutDirection UiWidgetSetLayoutDirection
+ENUM UiWidgetVisTypeDataReq::ValueType UiWidgetVisTypeDataReqValueType
+ENUM UiWidgetVisTypeDataReq::VisType UiWidgetVisualizationVisType
+ENUM UiWidgetVisualization::VisType UiWidgetVisualizationVisType
+ENUM UiWidgetVisualization::WidgetScale UiWidgetScale
+ENUM UnitCondition::Op[0] UnitConditionOperator
+ENUM UnitCondition::Op[1] UnitConditionOperator
+ENUM UnitCondition::Op[2] UnitConditionOperator
+ENUM UnitCondition::Op[3] UnitConditionOperator
+ENUM UnitCondition::Op[4] UnitConditionOperator
+ENUM UnitCondition::Op[5] UnitConditionOperator
+ENUM UnitCondition::Op[6] UnitConditionOperator
+ENUM UnitCondition::Op[7] UnitConditionOperator
+ENUM UnitCondition::Variable[0] UnitConditionVariable
+ENUM UnitCondition::Variable[1] UnitConditionVariable
+ENUM UnitCondition::Variable[2] UnitConditionVariable
+ENUM UnitCondition::Variable[3] UnitConditionVariable
+ENUM UnitCondition::Variable[4] UnitConditionVariable
+ENUM UnitCondition::Variable[5] UnitConditionVariable
+ENUM UnitCondition::Variable[6] UnitConditionVariable
+ENUM UnitCondition::Variable[7] UnitConditionVariable
+ENUM WaypointNode::Type WayPointNodeType
+ENUM WeaponSwingSounds2::SwingType WeaponSwingType
+ENUM Weather::Type WeatherType
+FLAGS Achievement::Flags AchievementFlags
+FLAGS AnimationData::Flags[0] AnimationDataFlags
+FLAGS AnimKitConfig::ConfigFlags AnimKitConfigFlags
+FLAGS AreaPOI::Flags AreaPOIFlags
+FLAGS AreaTable::Flags[0] AreaTableFlags0
+FLAGS AreaTable::Flags[1] AreaTableFlags1
+FLAGS AreaTable::MountFlags AreaTableMountFlags
+FLAGS AreaTriggerActionSet::Flags AreaTriggerActionSetFlags
+FLAGS ArtifactPower::Flags ArtifactPowerFlags
+FLAGS BattlemasterList::Flags BattlemasterListFlags
+FLAGS BattlePetAbility::Flags BattlePetAbilityFlags
+FLAGS BattlePetSpecies::Flags BattlePetSpeciesFlags
+FLAGS BattlePetState::Flags BattlePetStateFlags
+FLAGS BattlePetVisual::Flags BattlePetVisualFlags
+FLAGS BroadcastText::Flags BroadcastTextFlags
+FLAGS Campaign::Flags CampaignFlags
+FLAGS Cfg_Categories::Create_charsetMask CfgCategoriesCharsets
+FLAGS Cfg_Categories::Existing_charsetMask CfgCategoriesCharsets
+FLAGS Cfg_Categories::Flags CfgCategoriesFlags
+FLAGS CharSections::Flags CharSectionFlags
+FLAGS CharShipment::Flags CharShipmentFlags
+FLAGS ChatChannels::Flags ChatChannelFlags
+FLAGS ChrClasses::Flags ChrClassesFlags
+FLAGS ChrClassRaceSex::Flags ChrClassRaceSexFlags
+FLAGS ChrCustomizationCategory::Flags ChrCustomizationCategoryFlags
+FLAGS ChrCustomizationChoice::Flags ChrCustomizationChoiceFlags
+FLAGS ChrCustomizationOption::Flags ChrCustomizationOptionFlags
+FLAGS ChrCustomizationReq::ClassMask ClassMask
+FLAGS ChrCustomizationVisReq::Flags ChrCustomizationVisReqFlags
+FLAGS ChrModel::Flags ChrModelFlags
+FLAGS ChrModelMaterial::Flags ChrModelMaterialFlags
+FLAGS ChrRaces::Flags ChrRacesFlags
+FLAGS ChrSpecialization::Flags ChrSpecializationFlags
+FLAGS ContentRestrictionRule::Flags ContentRestrictionRuleFlags
+FLAGS ContentRestrictionRuleSet::Flags ContentRestrictionRuleSetFlags
+FLAGS ContentTuning::Flags ContentTuningFlags
+FLAGS CreatureDifficulty::Flags[0] CreatureStaticFlags0
+FLAGS CreatureDifficulty::Flags[1] CreatureStaticFlags1
+FLAGS CreatureDifficulty::Flags[2] CreatureStaticFlags2
+FLAGS CreatureDifficulty::Flags[3] CreatureStaticFlags3
+FLAGS CreatureDifficulty::Flags[4] CreatureStaticFlags4
+FLAGS CreatureDifficulty::Flags[5] CreatureStaticFlags5
+FLAGS CreatureDifficulty::Flags[6] CreatureStaticFlags6
+FLAGS CreatureDisplayInfo::Flags CreatureDisplayInfoFlags
+FLAGS CreatureImmunities::Flags CreatureImmunitiesFlags
+FLAGS CreatureModelData::Flags CreatureModelDataFlags
+FLAGS Criteria::Flags CriteriaFlags
+FLAGS CriteriaTree::Flags CriteriaTreeFlags
+FLAGS CurrencyTypes::Flags[0] CurrencyFlags0
+FLAGS CurrencyTypes::Flags[1] CurrencyFlags1
+FLAGS Difficulty::Flags DifficultyFlags
+FLAGS DungeonEncounter::Flags DungeonEncounterFlags
+FLAGS Emotes::EmoteFlags EmoteFlags
+FLAGS ExteriorComponent::Flags ExteriorComponentFlags
+FLAGS FriendshipReputation::Flags FriendshipReputationFlags
+FLAGS GarrAbility::Flags GarrAbilityFlags
+FLAGS GarrAbilityEffect::Flags GarrAbilityEffectFlags
+FLAGS GarrAutoSpell::Flags GarrAutoSpellFlags
+FLAGS GarrAutoSpellEffect::Flags GarrAutoSpellEffectFlags
+FLAGS GarrBuilding::Flags GarrBuildingFlags
+FLAGS GarrClassSpec::Flags GarrClassSpecFlags
+FLAGS GarrEncounter::Flags GarrEncounterFlags
+FLAGS GarrFollower::Flags GarrFollowerFlags
+FLAGS GarrFollowerType::Flags GarrFollowerTypeFlags
+FLAGS GarrMission::Flags GarrMissionFlags
+FLAGS GarrPlot::Flags GarrPlotFlags
+FLAGS GarrTalentTree::Flags GarrTalentTreeFlags
+FLAGS GarrType::Flags GarrTypeFlags
+FLAGS GemProperties::Type SocketColors
+FLAGS GlobalStrings::Flags GlobalStringsFlags
+FLAGS GroupFinderActivity::Flags GroupFinderActivityFlags
+FLAGS GroupFinderCategory::Flags GroupFinderCategoryFlags
+FLAGS Holidays::Flags HolidayFlags
+FLAGS HouseDecor::Flags HouseDecorFlags
+FLAGS HouseRoom::Flags HouseRoomFlags
+FLAGS ItemBonusList::Flags ItemBonusListFlags
+FLAGS ItemBonusListGroupEntry::Flags ItemBonusListGroupEntryFlags
+FLAGS ItemDisplayInfo::Flags ItemDisplayInfoFlags
+FLAGS ItemScalingConfig::Flags ItemScalingConfigFlags
+FLAGS ItemSearchName::AllowableClass ClassMask
+FLAGS ItemSearchName::Flags[0] ItemStaticFlags0
+FLAGS ItemSearchName::Flags[1] ItemStaticFlags1
+FLAGS ItemSearchName::Flags[2] ItemStaticFlags2
+FLAGS ItemSearchName::Flags[3] ItemStaticFlags3
+FLAGS ItemSearchName::Flags[4] ItemStaticFlags4
+FLAGS ItemSet::SetFlags ItemSetSetFlags
+FLAGS ItemSparse::AllowableClass ClassMask
+FLAGS ItemSparse::BagFamily BagFamily
+FLAGS ItemSparse::Flags[0] ItemStaticFlags0
+FLAGS ItemSparse::Flags[1] ItemStaticFlags1
+FLAGS ItemSparse::Flags[2] ItemStaticFlags2
+FLAGS ItemSparse::Flags[3] ItemStaticFlags3
+FLAGS ItemSparse::Flags[4] ItemStaticFlags4
+FLAGS ItemSubClass::DisplayFlags ItemSubClassDisplayFlags
+FLAGS ItemSubClass::Flags ItemSubClassFlags
+FLAGS JournalEncounter::Flags JournalEncounterFlags
+FLAGS JournalEncounterItem::Flags JournalEncounterItemFlags
+FLAGS JournalEncounterSection::Flags JournalEncounterSectionFlags
+FLAGS JournalInstance::Flags JournalInstanceFlags
+FLAGS LabelXContentRestrictRuleSet::Flags LabelXContentRestrictRuleSetFlags
+FLAGS Languages::Flags LanguageFlags
+FLAGS LFGDungeons::Flags[0] LFGDungeonFlags0
+FLAGS LFGDungeons::Flags[1] LFGDungeonFlags1
+FLAGS LightSkybox::Flags LightSkyboxFlags
+FLAGS LiquidType::Flags LiquidTypeFlags
+FLAGS Map::Flags[0] MapFlags0
+FLAGS Map::Flags[1] MapFlags1
+FLAGS Map::Flags[2] MapFlags2
+FLAGS MapDifficulty::Flags MapDifficultyFlags
+FLAGS Material::Flags MaterialFlags
+FLAGS ModifiedCraftingReagentItem::Flags OptionalReagentItemFlags
+FLAGS Mount::Flags MountFlags
+FLAGS MountCapability::Flags MountCapabilityFlags
+FLAGS Phase::Flags PhaseFlags
+FLAGS PlayerCondition::ClassMask ClassMask
+FLAGS PlayerCondition::Flags PlayerConditionFlags
+FLAGS PowerType::Flags PowerTypeFlags
+FLAGS QuestInfo::Modifiers QuestTagModifierFlags
+FLAGS QuestLineXQuest::Flags QuestListXQuestFlags
+FLAGS QuestObjective::Flags QuestObjectiveFlags
+FLAGS QuestPOIBlob::Flags QuestPOIBlobFlags
+FLAGS QuestV2CliTask::Flags[0] QuestFlags0
+FLAGS QuestV2CliTask::Flags[1] QuestFlags1
+FLAGS QuestV2CliTask::Flags[1] QuestFlags2
+FLAGS RenownRewards::Flags RenownRewardFlags
+FLAGS RuneforgeLegendaryAbility::InventoryTypeMask InventoryTypeMask
+FLAGS Scenario::Flags ScenarioFlags
+FLAGS ScenarioStep::Flags ScenarioStepFlags
+FLAGS SharedString::Flags SharedStringFlags
+FLAGS SkillLine::Flags SkillLineFlags
+FLAGS SoundAmbience::Flags SoundAmbienceFlags
+FLAGS SoundEmitters::Flags SoundEmitterFlags
+FLAGS SoundKit::Flags SoundKitFlags
+FLAGS SpellAuraOptions::ProcTypeMask[0] ProcTypeMask0
+FLAGS SpellAuraOptions::ProcTypeMask[1] ProcTypeMask1
+FLAGS SpellCastingRequirements::FacingCasterFlags FacingCasterFlags
+FLAGS SpellCategory::Flags SpellCategoryFlags
+FLAGS SpellEffect::EffectAttributes SpellEffectEffectAttributes
+FLAGS SpellEffect::EffectMiscValue[0] CombatRatingFlags SpellEffect::EffectAura=189
+FLAGS SpellEffect::EffectMiscValue[0] CombatRatingFlags SpellEffect::EffectAura=198
+FLAGS SpellEffect::EffectMiscValue[0] CombatRatingFlags SpellEffect::EffectAura=405
+FLAGS SpellEffect::EffectMiscValue[0] CombatRatingFlags SpellEffect::EffectAura=583
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=174
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=194
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=220
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=267
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=270
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=301
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=316
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=39
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=558
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=574
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=579
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=69
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=71
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=72
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=73
+FLAGS SpellEffect::EffectMiscValue[0] DamageClass SpellEffect::EffectAura=74
+FLAGS SpellEffect::EffectMiscValue[1] CombatRatingFlags SpellEffect::EffectAura=198
+FLAGS SpellInterrupts::AuraInterruptFlags[0] AuraInterruptFlags0
+FLAGS SpellInterrupts::AuraInterruptFlags[1] AuraInterruptFlags1
+FLAGS SpellInterrupts::ChannelInterruptFlags[0] AuraInterruptFlags0
+FLAGS SpellInterrupts::ChannelInterruptFlags[1] AuraInterruptFlags1
+FLAGS SpellInterrupts::InterruptFlags InterruptFlags
+FLAGS SpellItemEnchantment::Flags SpellItemEnchantmentFlags
+FLAGS SpellMisc::Attributes[0] SpellAttributes0
+FLAGS SpellMisc::Attributes[1] SpellAttributes1
+FLAGS SpellMisc::Attributes[2] SpellAttributes2
+FLAGS SpellMisc::Attributes[3] SpellAttributes3
+FLAGS SpellMisc::Attributes[4] SpellAttributes4
+FLAGS SpellMisc::Attributes[5] SpellAttributes5
+FLAGS SpellMisc::Attributes[6] SpellAttributes6
+FLAGS SpellMisc::Attributes[7] SpellAttributes7
+FLAGS SpellMisc::Attributes[8] SpellAttributes8
+FLAGS SpellMisc::Attributes[9] SpellAttributes9
+FLAGS SpellMisc::Attributes[10] SpellAttributes10
+FLAGS SpellMisc::Attributes[11] SpellAttributes11
+FLAGS SpellMisc::Attributes[12] SpellAttributes12
+FLAGS SpellMisc::Attributes[13] SpellAttributes13
+FLAGS SpellMisc::Attributes[14] SpellAttributes14
+FLAGS SpellMisc::Attributes[15] SpellAttributes15 // Some comment
+FLAGS SpellMisc::Attributes[16] SpellAttributes16
+FLAGS SpellMisc::SchoolMask DamageClass
+FLAGS SpellShapeshiftForm::Flags SpellShapeshiftFormFlags
+FLAGS SpellTargetRestrictions::TargetCreatureType TargetCreatureType // Seeded from CreatureType.db2
+FLAGS SpellTargetRestrictions::Targets TargetFlags
+FLAGS Stationery::Flags StetioneryFlags
+FLAGS SummonProperties::Flags SummonPropertiesFlags
+FLAGS SummonProperties::Flags[0] SummonPropertiesFlags
+FLAGS TaxiNodes::Flags TaxiNodeFlags
+FLAGS TraitCond::Flags TraitCondFlags
+FLAGS TraitCurrency::Flags TraitCurrencyFlags
+FLAGS TraitNode::Flags TraitNodeFlags
+FLAGS TraitNodeGroup::Flags TraitNodeGroupFlags
+FLAGS TraitTree::Flags TraitTreeFlags
+FLAGS TransmogIllusion::Flags TransmogIllusionFlags
+FLAGS TransmogSet::Flags TransmogSetFlags
+FLAGS TransmogSetItem::Flags TransmogSetItemFlags
+FLAGS UiMap::Flags UIMapFlags
+FLAGS UiModelSceneActor::Flags UIModelSceneActorFlags
+FLAGS UIScriptedAnimationEffect::Flags UIScriptedAnimationEffectFlags
+FLAGS VehiclePOIType::Flags VehiclePOITypeFlags
+FLAGS Vignette::Flags VignetteFlags
+FLAGS WarbandScene::Flags WarbandSceneFlags
+FLAGS WaypointEdge::Flags WaypointEdgeFlags
+FLAGS WaypointNode::Flags WaypointNodeFlags
+FLAGS WbAccessControlList::GrantFlags IngameBrowserFlags
+FLAGS WbAccessControlList::RevokeFlags IngameBrowserFlags
+FLAGS WMOAreaTable::Flags WMOAreaTableFlags
+FLAGS WorldMapArea::Flags WorldMapAreaFlags

@@ -2,8 +2,11 @@ name: Compile & release definitions
 on:
   workflow_dispatch:
   push:
+    branches:
+      - master
     paths:
       -  definitions/**
+      -  meta/**
       -  manifest.json
   workflow_run:
     workflows: ["Dump & merge"]
