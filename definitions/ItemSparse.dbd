@@ -78,13 +78,7 @@ int Field_7_3_2_25549_048? // probably RequiredPVPRank
 int Field_7_3_2_25549_049? // probably RequiredPVPMedal
 int Field_4_4_0_53750_013?
 int Field_1_15_3_55112_014?
-int Field_1_15_7_59706_027?
-int Field_1_15_7_59706_029?
-int Field_1_15_7_59706_032?
 int Field_1_15_7_59706_054?
-int Field_1_15_7_59706_057?
-int Field_1_15_7_59706_058?
-int Field_1_15_7_59706_059?
 int<Curve::ID> ItemLevelOffsetCurveID?
 int ItemLevelOffsetItemLevel? // same purpose as ItemScalingConfig::ItemLevel (curve parameter for ItemLevelOffsetCurveID)
 int<ItemSquishEra::ID> ItemSquishEraID?
@@ -1042,7 +1036,7 @@ BUILD 5.5.3.64141, 5.5.3.64308, 5.5.3.64400, 5.5.3.64530, 5.5.3.64794, 5.5.3.648
 BUILD 5.5.2.63832, 5.5.2.64068, 5.5.2.64133, 5.5.2.64271, 5.5.2.64481
 BUILD 5.5.1.62856, 5.5.1.63014, 5.5.1.63111, 5.5.1.63226, 5.5.1.63311, 5.5.1.63364, 5.5.1.63393, 5.5.1.63421, 5.5.1.63449, 5.5.1.63538, 5.5.1.63698
 BUILD 5.5.0.60481, 5.5.0.60548, 5.5.0.60700, 5.5.0.60802, 5.5.0.61000, 5.5.0.61051, 5.5.0.61135, 5.5.0.61184, 5.5.0.61208, 5.5.0.61217, 5.5.0.61411, 5.5.0.61496, 5.5.0.61632, 5.5.0.61735, 5.5.0.61767, 5.5.0.61798, 5.5.0.61820, 5.5.0.61879, 5.5.0.61916, 5.5.0.62044, 5.5.0.62071, 5.5.0.62232, 5.5.0.62258, 5.5.0.62422, 5.5.0.62518, 5.5.0.62655, 5.5.0.62959
-BUILD 3.80.1.66860, 3.80.1.66932
+BUILD 3.80.1.66860, 3.80.1.66932, 3.80.1.66991
 BUILD 3.80.0.64140, 3.80.0.64393, 3.80.0.64859, 3.80.0.65301, 3.80.0.65586, 3.80.0.65749, 3.80.0.65797, 3.80.0.65889, 3.80.0.65990, 3.80.0.66130, 3.80.0.66528, 3.80.0.66566
 BUILD 3.4.5.61815, 3.4.5.61934, 3.4.5.61937, 3.4.5.61996, 3.4.5.62072, 3.4.5.62256, 3.4.5.62386, 3.4.5.62423, 3.4.5.62544, 3.4.5.62824, 3.4.5.62916, 3.4.5.63009, 3.4.5.63309, 3.4.5.63623
 BUILD 3.4.4.59817, 3.4.4.59853, 3.4.4.59887, 3.4.4.60003, 3.4.4.60063, 3.4.4.60190, 3.4.4.60273, 3.4.4.60320, 3.4.4.60430, 3.4.4.60842, 3.4.4.60892, 3.4.4.61075, 3.4.4.61187, 3.4.4.61256, 3.4.4.61581
@@ -1078,12 +1072,12 @@ PriceVariance
 PriceRandomValue
 Flags<32>[5]
 OppositeFactionItemID<32>
-Field_1_15_7_59706_027<32>
+ModifiedCraftingReagentItemID<32>
 ContentTuningID<32>
-Field_1_15_7_59706_029<32>
+PlayerLevelToItemLevelCurveID<32>
 MaxDurability<u32>
 ItemNameDescriptionID<u16>
-Field_1_15_7_59706_032<u16>
+RequiredTransmogHoliday<u16>
 RequiredHoliday<u16>
 LimitCategory<u16>
 Gem_properties<u16>
@@ -1108,9 +1102,88 @@ Resistances<16>[7]
 Field_1_15_7_59706_054<u16>
 StatModifier_bonusAmount<16>[10]
 ExpansionID<u8>
-Field_1_15_7_59706_057<u8>
-Field_1_15_7_59706_058<u8>
-Field_1_15_7_59706_059<u8>
+ArtifactID<u8>
+SpellWeight<u8>
+SpellWeightCategory<u8>
+SocketType<u8>[3]
+SheatheType<u8>
+Material<u8>
+PageMaterialID<u8>
+LanguageID<u8>
+Bonding<u8>
+DamageType<u8>
+ContainerSlots<u8>
+RequiredPVPMedal<u8>
+RequiredPVPRank<8>
+InventoryType<8>
+OverallQualityID<8>
+AmmunitionType<u8>
+RequiredLevel<8>
+
+LAYOUT B51F7C79
+BUILD 5.5.4.67090
+COMMENT table is sparse
+$noninline,id$ID<32>
+Description_lang
+Display3_lang
+Display2_lang
+Display1_lang
+Display_lang
+DmgVariance
+DurationInInventory<u32>
+QualityModifier
+BagFamily<u32>
+StartQuestID<32>
+ItemRange
+StatPercentageOfSocket[10]
+StatPercentEditor<32>[10]
+Field_1_15_3_55112_014<32>[10]
+StatModifier_bonusStat<32>[10]
+Stackable<32>
+MaxCount<32>
+MinReputation<32>
+RequiredAbility<u32>
+AllowableRace<32>[2]
+SellPrice<u32>
+BuyPrice<u32>
+VendorStackCount<u32>
+PriceVariance
+PriceRandomValue
+Flags<32>[5]
+OppositeFactionItemID<32>
+ModifiedCraftingReagentItemID<32>
+ContentTuningID<32>
+PlayerLevelToItemLevelCurveID<32>
+MaxDurability<u32>
+ItemNameDescriptionID<u16>
+RequiredTransmogHoliday<u16>
+RequiredHoliday<u16>
+LimitCategory<u16>
+Gem_properties<u16>
+Socket_match_enchantment_ID<u16>
+TotemCategoryID<u16>
+InstanceBound<u16>
+ZoneBound<u16>[2]
+ItemSet<u16>
+LockID<u16>
+PageID<u16>
+ItemDelay<u16>
+MinFactionID<u16>
+RequiredSkillRank<u16>
+RequiredSkill<u16>
+ItemLevel<u16>
+AllowableClass<16>
+ItemRandomSuffixGroupID<u16>
+RandomSelect<u16>
+MinDamage<u16>[5]
+MaxDamage<u16>[5]
+Resistances<16>[7]
+Field_1_15_7_59706_054<u16>
+StatModifier_bonusAmount<16>[10]
+ExpansionID<u8>
+ArtifactID<u8>
+SpellWeight<u8>
+SpellWeightCategory<u8>
 SocketType<u8>[3]
 SheatheType<u8>
 Material<u8>
@@ -2537,7 +2610,7 @@ InventoryType<8>
 OverallQualityID<8>
 
 LAYOUT 88109EDA
-BUILD 12.0.5.66330, 12.0.5.66407, 12.0.5.66529, 12.0.5.66591, 12.0.5.66741
+BUILD 12.0.5.66330, 12.0.5.66407, 12.0.5.66529, 12.0.5.66591, 12.0.5.66741, 12.0.5.67088
 COMMENT table is sparse
 $noninline,id$ID<32>
 AllowableRace<64>
