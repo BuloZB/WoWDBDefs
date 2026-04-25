@@ -178,7 +178,7 @@ Field_1_15_4_56400_024<32>[3]
 FiltCompletedQuest<u32>[3]
 
 LAYOUT 00684B5C
-BUILD 5.5.4.67090
+BUILD 5.5.4.67090, 5.5.4.67177
 QuestTitle_lang
 BulletText_lang
 $id$ID<u32>
@@ -717,7 +717,7 @@ Flags<32>[3]
 FiltCompletedQuest<u32>[3]
 
 LAYOUT 4CDD3037
-BUILD 12.0.5.66330, 12.0.5.66407, 12.0.5.66529, 12.0.5.66591, 12.0.5.66741, 12.0.5.67088
+BUILD 12.0.5.66330, 12.0.5.66407, 12.0.5.66529, 12.0.5.66591, 12.0.5.66741, 12.0.5.67088, 12.0.5.67114, 12.0.5.67165, 12.0.5.67186
 $noninline,id$ID<32>
 FiltRaces<64>
 QuestTitle_lang

@@ -763,7 +763,7 @@ ChrSpecializationRole<32>
 Failure_description_lang
 
 LAYOUT 7A9E50CE
-BUILD 5.5.4.67090
+BUILD 5.5.4.67090, 5.5.4.67177
 $noninline,id$ID<32>
 Failure_description_lang
 MinLevel<u16>
@@ -2584,7 +2584,7 @@ TraitNodeEntryMinRank<u16>[4]
 TraitNodeEntryMaxRank<u16>[4]
 
 LAYOUT C44FB18A
-BUILD 12.0.5.66330, 12.0.5.66407, 12.0.5.66529, 12.0.5.66591, 12.0.5.66741, 12.0.5.67088
+BUILD 12.0.5.66330, 12.0.5.66407, 12.0.5.66529, 12.0.5.66591, 12.0.5.66741, 12.0.5.67088, 12.0.5.67114, 12.0.5.67165, 12.0.5.67186
 $noninline,id$ID<32>
 RaceMask<64>
 Failure_description_lang
