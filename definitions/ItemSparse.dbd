@@ -1040,7 +1040,7 @@ BUILD 3.80.1.66860, 3.80.1.66932, 3.80.1.66991, 3.80.1.67155
 BUILD 3.80.0.64140, 3.80.0.64393, 3.80.0.64859, 3.80.0.65301, 3.80.0.65586, 3.80.0.65749, 3.80.0.65797, 3.80.0.65889, 3.80.0.65990, 3.80.0.66130, 3.80.0.66528, 3.80.0.66566
 BUILD 3.4.5.61815, 3.4.5.61934, 3.4.5.61937, 3.4.5.61996, 3.4.5.62072, 3.4.5.62256, 3.4.5.62386, 3.4.5.62423, 3.4.5.62544, 3.4.5.62824, 3.4.5.62916, 3.4.5.63009, 3.4.5.63309, 3.4.5.63623
 BUILD 3.4.4.59817, 3.4.4.59853, 3.4.4.59887, 3.4.4.60003, 3.4.4.60063, 3.4.4.60190, 3.4.4.60273, 3.4.4.60320, 3.4.4.60430, 3.4.4.60842, 3.4.4.60892, 3.4.4.61075, 3.4.4.61187, 3.4.4.61256, 3.4.4.61581
-BUILD 2.5.5.64508, 2.5.5.64616, 2.5.5.64776, 2.5.5.64796, 2.5.5.64912, 2.5.5.65000, 2.5.5.65295, 2.5.5.65340, 2.5.5.65417, 2.5.5.65463, 2.5.5.65534, 2.5.5.65676, 2.5.5.65795, 2.5.5.65895, 2.5.5.66150, 2.5.5.66265, 2.5.5.66383, 2.5.5.66567, 2.5.5.66765, 2.5.5.67157
+BUILD 2.5.5.64508, 2.5.5.64616, 2.5.5.64776, 2.5.5.64796, 2.5.5.64912, 2.5.5.65000, 2.5.5.65295, 2.5.5.65340, 2.5.5.65417, 2.5.5.65463, 2.5.5.65534, 2.5.5.65676, 2.5.5.65795, 2.5.5.65895, 2.5.5.66150, 2.5.5.66265, 2.5.5.66383, 2.5.5.66567, 2.5.5.66765, 2.5.5.67157, 2.5.5.67323
 BUILD 1.15.8.63829, 1.15.8.64057, 1.15.8.64130, 1.15.8.64272, 1.15.8.64344, 1.15.8.64858, 1.15.8.64907, 1.15.8.65300, 1.15.8.65888, 1.15.8.65989, 1.15.8.66129, 1.15.8.66564, 1.15.8.67156
 BUILD 1.15.7.59706, 1.15.7.59856, 1.15.7.60000, 1.15.7.60013, 1.15.7.60141, 1.15.7.60191, 1.15.7.60249, 1.15.7.60277, 1.15.7.60663, 1.15.7.60932, 1.15.7.61124, 1.15.7.61186, 1.15.7.61257, 1.15.7.61582, 1.15.7.62797, 1.15.7.62915, 1.15.7.63306, 1.15.7.63696
 COMMENT table is sparse
@@ -1121,7 +1121,7 @@ AmmunitionType<u8>
 RequiredLevel<8>
 
 LAYOUT B51F7C79
-BUILD 5.5.4.67090, 5.5.4.67177
+BUILD 5.5.4.67090, 5.5.4.67177, 5.5.4.67279, 5.5.4.67345
 COMMENT table is sparse
 $noninline,id$ID<32>
 Description_lang
@@ -2610,10 +2610,82 @@ InventoryType<8>
 OverallQualityID<8>
 
 LAYOUT 88109EDA
-BUILD 12.0.5.66330, 12.0.5.66407, 12.0.5.66529, 12.0.5.66591, 12.0.5.66741, 12.0.5.67088, 12.0.5.67114, 12.0.5.67165, 12.0.5.67186, 12.0.5.67235
+BUILD 12.0.5.66330, 12.0.5.66407, 12.0.5.66529, 12.0.5.66591, 12.0.5.66741, 12.0.5.67088, 12.0.5.67114, 12.0.5.67165, 12.0.5.67186, 12.0.5.67235, 12.0.5.67314
 COMMENT table is sparse
 $noninline,id$ID<32>
 AllowableRace<64>
+Description_lang
+Display3_lang
+Display2_lang
+Display1_lang
+Display_lang
+ExpansionID<32>
+DmgVariance
+LimitCategory<32>
+DurationInInventory<u32>
+QualityModifier
+BagFamily<u32>
+StartQuestID<32>
+LanguageID<32>
+ItemRange
+StatPercentageOfSocket[10]
+StatPercentEditor<32>[10]
+StatModifier_bonusStat<32>[10]
+Stackable<32>
+MaxCount<32>
+MinReputation<32>
+RequiredAbility<u32>
+AllowableRaces<32>[2]
+SellPrice<u32>
+BuyPrice<u32>
+VendorStackCount<u32>
+PriceVariance
+PriceRandomValue
+Flags<32>[5]
+OppositeFactionItemID<32>
+ModifiedCraftingReagentItemID<32>
+ContentTuningID<32>
+PlayerLevelToItemLevelCurveID<32>
+ItemLevelOffsetCurveID<32>
+ItemLevelOffsetItemLevel<32>
+ItemSquishEraID<32>
+ItemNameDescriptionID<u16>
+RequiredTransmogHoliday<u16>
+RequiredHoliday<u16>
+Gem_properties<u16>
+Socket_match_enchantment_ID<u16>
+TotemCategoryID<u16>
+InstanceBound<u16>
+ZoneBound<u16>[2]
+ItemSet<u16>
+LockID<u16>
+PageID<u16>
+ItemDelay<u16>
+MinFactionID<u16>
+RequiredSkillRank<u16>
+RequiredSkill<u16>
+ItemLevel<u16>
+AllowableClass<16>
+ArtifactID<u8>
+SpellWeight<u8>
+SpellWeightCategory<u8>
+SocketType<u8>[3]
+SheatheType<u8>
+Material<u8>
+PageMaterialID<u8>
+Bonding<u8>
+DamageType<u8>
+ContainerSlots<u8>
+RequiredPVPMedal<u8>
+RequiredPVPRank<8>
+RequiredLevel<8>
+InventoryType<8>
+OverallQualityID<8>
+
+LAYOUT 1C17D17F
+BUILD 12.0.7.67227, 12.0.7.67344
+COMMENT table is sparse
+$noninline,id$ID<32>
 Description_lang
 Display3_lang
 Display2_lang

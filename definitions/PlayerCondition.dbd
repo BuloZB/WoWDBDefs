@@ -762,96 +762,6 @@ ChrSpecializationIndex<32>
 ChrSpecializationRole<32>
 Failure_description_lang
 
-LAYOUT 7A9E50CE
-BUILD 5.5.4.67090, 5.5.4.67177
-$noninline,id$ID<32>
-Failure_description_lang
-MinLevel<u16>
-MaxLevel<u16>
-ClassMask<32>
-SkillLogic<u32>
-LanguageID<32>
-MinLanguage<u8>
-MaxLanguage<32>
-MaxFactionID<u16>
-MaxReputation<u8>
-ReputationLogic<u32>
-CurrentPvpFaction<8>
-PvpMedal<u8>
-PrevQuestLogic<u32>
-CurrQuestLogic<u32>
-CurrentCompletedQuestLogic<u32>
-SpellLogic<u32>
-ItemLogic<u32>
-ItemFlags<32>
-AuraSpellLogic<u32>
-WorldStateExpressionID<u16>
-WeatherID<32>
-PartyStatus<u8>
-LifetimeMaxPVPRank<8>
-AchievementLogic<u32>
-Gender<8>
-NativeGender<8>
-AreaLogic<u32>
-LfgLogic<u32>
-CurrencyLogic<u32>
-QuestKillID<32>
-QuestKillLogic<u32>
-MinExpansionLevel<8>
-MaxExpansionLevel<8>
-MinAvgItemLevel<32>
-MaxAvgItemLevel<32>
-MinAvgEquippedItemLevel<u16>
-MaxAvgEquippedItemLevel<u16>
-PhaseUseFlags<32>
-PhaseID<u16>
-PhaseGroupID<u32>
-Flags<32>
-ChrSpecializationIndex<8>
-ChrSpecializationRole<8>
-ModifierTreeID<u32>
-PowerType<8>
-PowerTypeComp<u8>
-PowerTypeValue<8>
-WeaponSubclassMask<32>
-MaxGuildLevel<u8>
-MinGuildLevel<u8>
-MaxExpansionTier<8>
-MinExpansionTier<8>
-MinPVPRank<8>
-MaxPVPRank<8>
-ContentTuningID<32>
-CovenantID<32>
-TraitNodeEntryLogic<u32>
-SkillID<u16>[4]
-MinSkill<u16>[4]
-MaxSkill<u16>[4]
-MinFactionID<u32>[3]
-MinReputation<u8>[3]
-PrevQuestID<32>[4]
-CurrQuestID<32>[4]
-CurrentCompletedQuestID<32>[4]
-SpellID<32>[4]
-ItemID<32>[4]
-ItemCount<u32>[4]
-Explored<u16>[2]
-Time<u32>[2]
-AuraSpellID<32>[4]
-AuraStacks<u8>[4]
-Achievement<u32>[4]
-AreaID<u16>[4]
-LfgStatus<u8>[4]
-LfgCompare<u8>[4]
-LfgValue<u32>[4]
-CurrencyID<u32>[4]
-CurrencyCount<u32>[4]
-QuestKillMonster<u32>[6]
-MovementFlags<32>[2]
-RaceMask<32>[2]
-TraitNodeEntryID<32>[4]
-TraitNodeEntryMinRank<u16>[4]
-TraitNodeEntryMaxRank<u16>[4]
-
 BUILD 6.0.1.18179
 BUILD 5.2.0.16516-5.4.8.18414
 $id$ID<32>
@@ -2402,7 +2312,7 @@ BUILD 11.2.5.62785, 11.2.5.62940, 11.2.5.63092, 11.2.5.63286, 11.2.5.63506, 11.2
 BUILD 5.5.3.64141, 5.5.3.64308, 5.5.3.64400, 5.5.3.64530, 5.5.3.64794, 5.5.3.64802, 5.5.3.64857, 5.5.3.65302, 5.5.3.65703, 5.5.3.65746, 5.5.3.65890, 5.5.3.65988, 5.5.3.66128, 5.5.3.66264, 5.5.3.66290, 5.5.3.66382, 5.5.3.66509, 5.5.3.66565, 5.5.3.66839, 5.5.3.67158
 BUILD 3.80.1.66860, 3.80.1.66932, 3.80.1.66991, 3.80.1.67155
 BUILD 3.80.0.64140, 3.80.0.64393, 3.80.0.64859, 3.80.0.65301, 3.80.0.65586, 3.80.0.65749, 3.80.0.65797, 3.80.0.65889, 3.80.0.65990, 3.80.0.66130, 3.80.0.66528, 3.80.0.66566
-BUILD 2.5.5.64508, 2.5.5.64616, 2.5.5.64776, 2.5.5.64796, 2.5.5.64912, 2.5.5.65000, 2.5.5.65295, 2.5.5.65340, 2.5.5.65417, 2.5.5.65463, 2.5.5.65534, 2.5.5.65676, 2.5.5.65795, 2.5.5.65895, 2.5.5.66150, 2.5.5.66265, 2.5.5.66383, 2.5.5.66567, 2.5.5.66765, 2.5.5.67157
+BUILD 2.5.5.64508, 2.5.5.64616, 2.5.5.64776, 2.5.5.64796, 2.5.5.64912, 2.5.5.65000, 2.5.5.65295, 2.5.5.65340, 2.5.5.65417, 2.5.5.65463, 2.5.5.65534, 2.5.5.65676, 2.5.5.65795, 2.5.5.65895, 2.5.5.66150, 2.5.5.66265, 2.5.5.66383, 2.5.5.66567, 2.5.5.66765, 2.5.5.67157, 2.5.5.67323
 BUILD 1.15.8.63829, 1.15.8.64057, 1.15.8.64130, 1.15.8.64272, 1.15.8.64344, 1.15.8.64858, 1.15.8.64907, 1.15.8.65300, 1.15.8.65888, 1.15.8.65989, 1.15.8.66129, 1.15.8.66564, 1.15.8.67156
 $noninline,id$ID<32>
 RaceMask<64>
@@ -2584,7 +2494,7 @@ TraitNodeEntryMinRank<u16>[4]
 TraitNodeEntryMaxRank<u16>[4]
 
 LAYOUT C44FB18A
-BUILD 12.0.5.66330, 12.0.5.66407, 12.0.5.66529, 12.0.5.66591, 12.0.5.66741, 12.0.5.67088, 12.0.5.67114, 12.0.5.67165, 12.0.5.67186, 12.0.5.67235
+BUILD 12.0.5.66330, 12.0.5.66407, 12.0.5.66529, 12.0.5.66591, 12.0.5.66741, 12.0.5.67088, 12.0.5.67114, 12.0.5.67165, 12.0.5.67186, 12.0.5.67235, 12.0.5.67314
 $noninline,id$ID<32>
 RaceMask<64>
 Failure_description_lang
@@ -2670,6 +2580,97 @@ CurrencyCount<u32>[4]
 QuestKillMonster<u32>[6]
 MovementFlags<32>[2]
 RaceMasks<32>[2]
+TraitNodeEntryID<32>[4]
+TraitNodeEntryMinRank<u16>[4]
+TraitNodeEntryMaxRank<u16>[4]
+
+LAYOUT 7A9E50CE
+BUILD 12.0.7.67227, 12.0.7.67344
+BUILD 5.5.4.67090, 5.5.4.67177, 5.5.4.67279, 5.5.4.67345
+$noninline,id$ID<32>
+Failure_description_lang
+MinLevel<u16>
+MaxLevel<u16>
+ClassMask<32>
+SkillLogic<u32>
+LanguageID<32>
+MinLanguage<u8>
+MaxLanguage<32>
+MaxFactionID<u16>
+MaxReputation<u8>
+ReputationLogic<u32>
+CurrentPvpFaction<8>
+PvpMedal<u8>
+PrevQuestLogic<u32>
+CurrQuestLogic<u32>
+CurrentCompletedQuestLogic<u32>
+SpellLogic<u32>
+ItemLogic<u32>
+ItemFlags<32>
+AuraSpellLogic<u32>
+WorldStateExpressionID<u16>
+WeatherID<32>
+PartyStatus<u8>
+LifetimeMaxPVPRank<8>
+AchievementLogic<u32>
+Gender<8>
+NativeGender<8>
+AreaLogic<u32>
+LfgLogic<u32>
+CurrencyLogic<u32>
+QuestKillID<32>
+QuestKillLogic<u32>
+MinExpansionLevel<8>
+MaxExpansionLevel<8>
+MinAvgItemLevel<32>
+MaxAvgItemLevel<32>
+MinAvgEquippedItemLevel<u16>
+MaxAvgEquippedItemLevel<u16>
+PhaseUseFlags<32>
+PhaseID<u16>
+PhaseGroupID<u32>
+Flags<32>
+ChrSpecializationIndex<8>
+ChrSpecializationRole<8>
+ModifierTreeID<u32>
+PowerType<8>
+PowerTypeComp<u8>
+PowerTypeValue<8>
+WeaponSubclassMask<32>
+MaxGuildLevel<u8>
+MinGuildLevel<u8>
+MaxExpansionTier<8>
+MinExpansionTier<8>
+MinPVPRank<8>
+MaxPVPRank<8>
+ContentTuningID<32>
+CovenantID<32>
+TraitNodeEntryLogic<u32>
+SkillID<u16>[4]
+MinSkill<u16>[4]
+MaxSkill<u16>[4]
+MinFactionID<u32>[3]
+MinReputation<u8>[3]
+PrevQuestID<32>[4]
+CurrQuestID<32>[4]
+CurrentCompletedQuestID<32>[4]
+SpellID<32>[4]
+ItemID<32>[4]
+ItemCount<u32>[4]
+Explored<u16>[2]
+Time<u32>[2]
+AuraSpellID<32>[4]
+AuraStacks<u8>[4]
+Achievement<u32>[4]
+AreaID<u16>[4]
+LfgStatus<u8>[4]
+LfgCompare<u8>[4]
+LfgValue<u32>[4]
+CurrencyID<u32>[4]
+CurrencyCount<u32>[4]
+QuestKillMonster<u32>[6]
+MovementFlags<32>[2]
+RaceMask<32>[2]
 TraitNodeEntryID<32>[4]
 TraitNodeEntryMinRank<u16>[4]
 TraitNodeEntryMaxRank<u16>[4]
